@@ -10,5 +10,6 @@ export interface Project {
   name: string;
   description: string;
   skills: Skill[];
-  img: string;
+  site: string;
+  github: string;
 }

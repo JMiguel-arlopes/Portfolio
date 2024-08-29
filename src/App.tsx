@@ -1,290 +1,21 @@
 import { NavBar } from "./componets/NavBar";
-import userImage from "./assets/perfil_preview_rev_1.png";
-import { FaGithub, FaLinkedin } from "react-icons/fa";
+
 import { LuDownload } from "react-icons/lu";
 import img_about_me from "./assets/Empty State Concept_preview_rev_2.png";
 import eclipse from "./assets/Intersection 7.svg";
 import eclipse2 from "./assets/Vector 1.svg";
-// import eclipse3 from "./assets/hero-bg.svg";
-// import eclipse4 from "./assets/hero-bg.svg";
-import { IoLogoJavascript } from "react-icons/io";
-import { FaReact } from "react-icons/fa";
-import { FaPython } from "react-icons/fa6";
-import { TbBrandCSharp } from "react-icons/tb";
-import { SiDotnet } from "react-icons/si";
-import { SiTailwindcss } from "react-icons/si";
-import { GrMysql } from "react-icons/gr";
-import { FaGitAlt } from "react-icons/fa6";
-import { DiNodejs } from "react-icons/di";
-import { SiBlockchaindotcom } from "react-icons/si";
-import { FaHtml5 } from "react-icons/fa";
-import { FaCss3Alt } from "react-icons/fa";
-import { CardSkill } from "./componets/CardSkill";
-import { Project, Skill } from "./interfaces";
-import img from "./assets/db439986-0833-4777-8014-dfc13460eedf.jpg";
-import { CardProject } from "./componets/CardProject";
 
-import { Navigation, Pagination, Scrollbar, A11y } from "swiper/modules";
-import { Swiper, SwiperSlide } from "swiper/react";
-import "swiper/css";
-import "swiper/css/navigation";
-import "swiper/css/pagination";
-import "swiper/css/scrollbar";
+import Footer from "./componets/Footer";
+import IconsList from "./componets/IconsList";
+// import { skills } from "./datas";
+import SwipperProjects from "./componets/SwipperProjects";
+import SkillCardsList from "./componets/SkillCardsList";
+import UserPicture from "./componets/UserPicture";
 
 function App() {
-  const skills: Skill[] = [
-    {
-      name: "JavaScript",
-      image: <IoLogoJavascript className="w-full text-white h-full" />,
-    },
-    {
-      name: "React",
-      image: <FaReact className="w-full text-white h-full" />,
-    },
-    {
-      name: "Python",
-      image: <FaPython className="w-full text-white h-full" />,
-    },
-    {
-      name: "Csharp",
-      image: <TbBrandCSharp className="w-full text-white h-full" />,
-    },
-    {
-      name: ".NET",
-      image: <SiDotnet className="w-full text-white h-full" />,
-    },
-    {
-      name: "Tailwind",
-      image: <SiTailwindcss className="w-full text-white h-full" />,
-    },
-    {
-      name: "MySQL",
-      image: <GrMysql className="w-full text-white h-full" />,
-    },
-    {
-      name: "Blockchain",
-      image: <SiBlockchaindotcom className="w-full text-white h-full" />,
-    },
-    {
-      name: "Node.JS",
-      image: <DiNodejs className="w-full text-white h-full" />,
-    },
-    {
-      name: "GIT",
-      image: <FaGitAlt className="w-full text-white h-full" />,
-    },
-    {
-      name: "HTML",
-      image: <FaHtml5 className="w-full text-white h-full" />,
-    },
-    {
-      name: "CSS",
-      image: <FaCss3Alt className="w-full text-white h-full" />,
-    },
-    {
-      name: "GITHUB",
-      image: <FaGithub className="w-full text-white h-full" />,
-    },
-  ];
-
-  const projects: Project[] = [
-    {
-      name: "Primeiro Projeto",
-      description:
-        "Lorem ipsum dolor, sit amet consectetur adipisicing eli Voluptatem nostrum. Obcaecati nihil possimus consequuntur vero dignissimos quasi quam modi sint porro et harum laborum illo illum accusantium nam esse doloribus",
-      skills: [
-        {
-          name: "JavaScript",
-          image: <IoLogoJavascript className="w-full text-white h-full" />,
-        },
-        {
-          name: "React",
-          image: <FaReact className="w-full text-white h-full" />,
-        },
-        {
-          name: "Python",
-          image: <FaPython className="w-full text-white h-full" />,
-        },
-        {
-          name: "Csharp",
-          image: <TbBrandCSharp className="w-full text-white h-full" />,
-        },
-        {
-          name: ".NET",
-          image: <SiDotnet className="w-full text-white h-full" />,
-        },
-        {
-          name: "Tailwind",
-          image: <SiTailwindcss className="w-full text-white h-full" />,
-        },
-      ],
-      img: img,
-    },
-    {
-      name: "Segundo Projeto",
-      description:
-        "Lorem ipsum dolor, sit amet consectetur adipisicing eli Voluptatem nostrum. Obcaecati nihil possimus consequuntur vero dignissimos quasi quam modi sint porro et harum laborum illo illum accusantium nam esse doloribus",
-      skills: [
-        {
-          name: "JavaScript",
-          image: <IoLogoJavascript className="w-full text-white h-full" />,
-        },
-        {
-          name: "React",
-          image: <FaReact className="w-full text-white h-full" />,
-        },
-        {
-          name: "Python",
-          image: <FaPython className="w-full text-white h-full" />,
-        },
-        {
-          name: "Csharp",
-          image: <TbBrandCSharp className="w-full text-white h-full" />,
-        },
-        {
-          name: ".NET",
-          image: <SiDotnet className="w-full text-white h-full" />,
-        },
-        {
-          name: "Tailwind",
-          image: <SiTailwindcss className="w-full text-white h-full" />,
-        },
-      ],
-      img: img,
-    },
-    {
-      name: "Segundo Projeto",
-      description:
-        "Lorem ipsum dolor, sit amet consectetur adipisicing eli Voluptatem nostrum. Obcaecati nihil possimus consequuntur vero dignissimos quasi quam modi sint porro et harum laborum illo illum accusantium nam esse doloribus",
-      skills: [
-        {
-          name: "JavaScript",
-          image: <IoLogoJavascript className="w-full text-white h-full" />,
-        },
-        {
-          name: "React",
-          image: <FaReact className="w-full text-white h-full" />,
-        },
-        {
-          name: "Python",
-          image: <FaPython className="w-full text-white h-full" />,
-        },
-        {
-          name: "Csharp",
-          image: <TbBrandCSharp className="w-full text-white h-full" />,
-        },
-        {
-          name: ".NET",
-          image: <SiDotnet className="w-full text-white h-full" />,
-        },
-        {
-          name: "Tailwind",
-          image: <SiTailwindcss className="w-full text-white h-full" />,
-        },
-      ],
-      img: img,
-    },
-    {
-      name: "Segundo Projeto",
-      description:
-        "Lorem ipsum dolor, sit amet consectetur adipisicing eli Voluptatem nostrum. Obcaecati nihil possimus consequuntur vero dignissimos quasi quam modi sint porro et harum laborum illo illum accusantium nam esse doloribus",
-      skills: [
-        {
-          name: "JavaScript",
-          image: <IoLogoJavascript className="w-full text-white h-full" />,
-        },
-        {
-          name: "React",
-          image: <FaReact className="w-full text-white h-full" />,
-        },
-        {
-          name: "Python",
-          image: <FaPython className="w-full text-white h-full" />,
-        },
-        {
-          name: "Csharp",
-          image: <TbBrandCSharp className="w-full text-white h-full" />,
-        },
-        {
-          name: ".NET",
-          image: <SiDotnet className="w-full text-white h-full" />,
-        },
-        {
-          name: "Tailwind",
-          image: <SiTailwindcss className="w-full text-white h-full" />,
-        },
-      ],
-      img: img,
-    },
-    {
-      name: "Segundo Projeto",
-      description:
-        "Lorem ipsum dolor, sit amet consectetur adipisicing eli Voluptatem nostrum. Obcaecati nihil possimus consequuntur vero dignissimos quasi quam modi sint porro et harum laborum illo illum accusantium nam esse doloribus",
-      skills: [
-        {
-          name: "JavaScript",
-          image: <IoLogoJavascript className="w-full text-white h-full" />,
-        },
-        {
-          name: "React",
-          image: <FaReact className="w-full text-white h-full" />,
-        },
-        {
-          name: "Python",
-          image: <FaPython className="w-full text-white h-full" />,
-        },
-        {
-          name: "Csharp",
-          image: <TbBrandCSharp className="w-full text-white h-full" />,
-        },
-        {
-          name: ".NET",
-          image: <SiDotnet className="w-full text-white h-full" />,
-        },
-        {
-          name: "Tailwind",
-          image: <SiTailwindcss className="w-full text-white h-full" />,
-        },
-      ],
-      img: img,
-    },
-    {
-      name: "Segundo Projeto",
-      description:
-        "Lorem ipsum dolor, sit amet consectetur adipisicing eli Voluptatem nostrum. Obcaecati nihil possimus consequuntur vero dignissimos quasi quam modi sint porro et harum laborum illo illum accusantium nam esse doloribus",
-      skills: [
-        {
-          name: "JavaScript",
-          image: <IoLogoJavascript className="w-full text-white h-full" />,
-        },
-        {
-          name: "React",
-          image: <FaReact className="w-full text-white h-full" />,
-        },
-        {
-          name: "Python",
-          image: <FaPython className="w-full text-white h-full" />,
-        },
-        {
-          name: "Csharp",
-          image: <TbBrandCSharp className="w-full text-white h-full" />,
-        },
-        {
-          name: ".NET",
-          image: <SiDotnet className="w-full text-white h-full" />,
-        },
-        {
-          name: "Tailwind",
-          image: <SiTailwindcss className="w-full text-white h-full" />,
-        },
-      ],
-      img: img,
-    },
-  ];
-
   return (
     <div className="bg-gradient-to-b from-slate-950 to-blue-950">
-      <section className="min-h-screen pt-28 overflow relative">
+      <section className="min-h-screen pt-28 overflow relative" id="home">
         <img
           src={eclipse2}
           alt=""
@@ -310,23 +41,14 @@ function App() {
               <button className="mr-6 px-12 py-2 rounded-full text-sm border border-cyan-400 text-cyan-400 flex justify-center items-center gap-2 transition hover:bg-cyan-400 hover:text-white hover:cursor-pointer">
                 Baixar CV <LuDownload />
               </button>
-              <ul className="flex justify-center items-center">
-                <li className="flex justify-center items-center text-cyan-400 p-2 border border-cyan-400 rounded-full text-sm mr-6 transition hover:bg-cyan-400 hover:text-white hover:cursor-pointer">
-                  <FaGithub />
-                </li>
-                <li className="flex justify-center items-center text-cyan-400 p-2 border border-cyan-400 rounded-full text-sm transition hover:bg-cyan-400 hover:text-white hover:cursor-pointer">
-                  <FaLinkedin />
-                </li>
-              </ul>
+              <IconsList />
             </div>
           </div>
-          <div className="bg-cyan-400 rounded-full flex justify-center items-center overflow-hidden size-96 shadow-neon">
-            <img src={userImage} alt="Perfil - João Miguel" />
-          </div>
+          <UserPicture />
         </div>
       </section>
-      <section className="py-16 overflow relative">
-        <div className="px-12  flex justify-center items-center z-50 relative">
+      <section className="py-16 overflow relative" id="aboutme">
+        <div className="px-12  flex justify-center items-center z-40 relative">
           <img
             src={eclipse}
             alt=""
@@ -374,39 +96,25 @@ function App() {
           </div>
         </div>
       </section>
-      <section className="py-16 overflow relative flex justify-start items-center flex-col">
+      <section
+        className="py-16 overflow relative flex justify-start items-center flex-col"
+        id="skills"
+      >
         <h2 className="text-center text-white font-bold text-4xl mb-12">
           Skills
         </h2>
-        <ul className="max-w-section flex justify-center items-center flex-wrap">
-          {skills.map((skill, index) => (
-            <CardSkill skill={skill} key={index} small={false} />
-          ))}
-        </ul>
+        <SkillCardsList />
       </section>
-      <section className="py-16 overflow relative flex justify-start items-center flex-col">
+      <section
+        className="py-16 overflow relative flex justify-start items-center flex-col"
+        id="projects"
+      >
         <h2 className="text-center text-white font-bold text-4xl mb-12">
           Projetos
         </h2>
-        <div className="max-w-section w-full">
-          <Swiper
-            spaceBetween={5}
-            slidesPerView={3}
-            modules={[Navigation, Pagination, Scrollbar, A11y]}
-            // navigation
-            pagination={{
-              dynamicBullets: true,
-            }}
-            // style={{ padding: "2rem 0" }}
-          >
-            {projects.map((project, index) => (
-              <SwiperSlide key={index} style={{ justifyContent: "center" }}>
-                <CardProject project={project} />
-              </SwiperSlide>
-            ))}
-          </Swiper>
-        </div>
+        <SwipperProjects />
       </section>
+      <Footer />
     </div>
   );
 }

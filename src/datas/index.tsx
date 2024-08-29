@@ -12,7 +12,6 @@ import { TbBrandCSharp } from "react-icons/tb";
 import { SiBlockchaindotcom, SiDotnet, SiTailwindcss } from "react-icons/si";
 import { GrMysql } from "react-icons/gr";
 import { DiNodejs } from "react-icons/di";
-import img from "./assets/db439986-0833-4777-8014-dfc13460eedf.jpg";
 
 export const skills: Skill[] = [
   {
@@ -71,7 +70,7 @@ export const skills: Skill[] = [
 
 export const projects: Project[] = [
   {
-    name: "Primeiro Projeto",
+    name: "Orange Portfolio",
     description:
       "Lorem ipsum dolor, sit amet consectetur adipisicing eli Voluptatem nostrum. Obcaecati nihil possimus consequuntur vero dignissimos quasi quam modi sint porro et harum laborum illo illum accusantium nam esse doloribus",
     skills: [
@@ -84,23 +83,16 @@ export const projects: Project[] = [
         image: <FaReact className="w-full text-white h-full" />,
       },
       {
-        name: "Python",
-        image: <FaPython className="w-full text-white h-full" />,
+        name: "HTML",
+        image: <FaHtml5 className="w-full text-white h-full" />,
       },
       {
-        name: "Csharp",
-        image: <TbBrandCSharp className="w-full text-white h-full" />,
-      },
-      {
-        name: ".NET",
-        image: <SiDotnet className="w-full text-white h-full" />,
-      },
-      {
-        name: "Tailwind",
-        image: <SiTailwindcss className="w-full text-white h-full" />,
+        name: "CSS",
+        image: <FaCss3Alt className="w-full text-white h-full" />,
       },
     ],
-    img: img,
+    site: "https://portfolio-orange.vercel.app/",
+    github: "https://github.com/JMiguel-arlopes/portfolio-orange",
   },
   {
     name: "Segundo Projeto",
@@ -132,6 +124,7 @@ export const projects: Project[] = [
         image: <SiTailwindcss className="w-full text-white h-full" />,
       },
     ],
-    img: img,
+    site: "",
+    github: "",
   },
 ];
